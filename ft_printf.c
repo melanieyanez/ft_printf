@@ -6,7 +6,7 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:26:27 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/11 17:32:13 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:28:57 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	conv_select(const char c, va_list arg_list)
 	else if (c == 'd' || c == 'i')
 		return (print_number(va_arg(arg_list, int)));
 	else if (c == 'x')
-		return (print_hexa_number(va_arg(arg_list, unsigned int), BASEHEXAMIN));
+		return (print_hexa_number(va_arg(arg_list, unsigned int), BHMIN));
 	else if (c == 'X')
-		return (print_hexa_number(va_arg(arg_list, unsigned int), BASEHEXAMAJ));
+		return (print_hexa_number(va_arg(arg_list, unsigned int), BHMAJ));
 	else if (c == 'u')
 		return (print_unsigned_number(va_arg(arg_list, unsigned int)));
 	else if (c == 'c')
@@ -29,7 +29,7 @@ int	conv_select(const char c, va_list arg_list)
 	else if (c == 's')
 		return (print_str(va_arg(arg_list, char *)));
 	else if (c == 'p')
-		return (print_str("0x") + print_ptr(va_arg(arg_list, unsigned long long), BASEHEXAMIN));
+		return (print_str("0x") + print_ptr(va_arg(arg_list, ULL), BHMIN));
 	else
 		write(1, &c, 1);
 	return (1);

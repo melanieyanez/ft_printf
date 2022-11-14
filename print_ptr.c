@@ -6,7 +6,7 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:25:07 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/11 17:35:05 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:29:13 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	print_ptr(unsigned long long n, char *base)
 	base_len = (unsigned int) ft_strlen(base);
 	if (n >= base_len)
 	{
-		print_hexa_number((n / base_len), base);
+		print_ptr((n / base_len), base);
 		print_char(base[n % base_len]);
 	}
 	else

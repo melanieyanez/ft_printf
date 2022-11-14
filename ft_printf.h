@@ -6,7 +6,7 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 13:06:32 by melanieyane       #+#    #+#             */
-/*   Updated: 2022/11/11 17:33:55 by myanez-p         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:28:29 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,9 @@
 # include <stdarg.h>
 # include <limits.h>
 
-# ifndef BASEHEXAMIN
-#  define BASEHEXAMIN "0123456789abcdef"
-# endif
-
-# ifndef BASEHEXAMAJ
-#  define BASEHEXAMAJ "0123456789ABCDEF"
-# endif
+# define ULL unsigned long long
+# define BHMIN "0123456789abcdef"
+# define BHMAJ "0123456789ABCDEF"
 
 int		ft_printf(const char *arg0, ...);
 int		print_char(char c);
