@@ -6,11 +6,14 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 13:59:22 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/11 15:00:45 by myanez-p         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:08:39 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* ------------------------------------------------------------------------ */
+/* Pour renvoyer le nombre de charactères imprimés */
 
 int	unbrlen(unsigned int n)
 {
@@ -26,6 +29,9 @@ int	unbrlen(unsigned int n)
 	return (size);
 }
 
+/* ------------------------------------------------------------------------ */
+/* Pour imprimer un nombre entier non-signé */
+
 int	print_unsigned_number(unsigned int n)
 {
 	unsigned long int	nbr;
@@ -36,11 +42,3 @@ int	print_unsigned_number(unsigned int n)
 	print_char((nbr % 10 + 48));
 	return (unbrlen(n));
 }
-
-/*
-int	main(void)
-{
-	printf("%u", print_number(-95485221));
-	return (0);
-}
-*/

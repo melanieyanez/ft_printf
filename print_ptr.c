@@ -6,11 +6,14 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:25:07 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/14 13:29:13 by myanez-p         ###   ########.fr       */
+/*   Updated: 2023/03/06 12:25:31 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* ------------------------------------------------------------------------ */
+/* Pour renvoyer le nombre de charactères imprimés */
 
 int	pnbrlen(unsigned long long n, char *base)
 {
@@ -27,6 +30,9 @@ int	pnbrlen(unsigned long long n, char *base)
 	size ++;
 	return (size);
 }
+
+/* ------------------------------------------------------------------------ */
+/* Pour imprimer une adresse mémoire */
 
 int	print_ptr(unsigned long long n, char *base)
 {

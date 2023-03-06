@@ -6,11 +6,15 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 14:26:27 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/14 13:28:57 by myanez-p         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:20:05 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* ------------------------------------------------------------------------ */
+/* Permet de sélectionner la fonction à utiliser */
+/* selon l'option donnée à la suite du % */
 
 int	conv_select(const char c, va_list arg_list)
 {
@@ -34,6 +38,9 @@ int	conv_select(const char c, va_list arg_list)
 		write(1, &c, 1);
 	return (1);
 }
+
+/* Fonction utilisant une va_list pour utiliser un nombre variable */
+/* d'arguments de type non-défini */
 
 int	ft_printf(const char *arg0, ...)
 {
@@ -62,9 +69,7 @@ int	ft_printf(const char *arg0, ...)
 /*
 int	main(void)
 {
-	printf("%d", ft_printf("salut %X\n", 0));
-	printf("%d", printf("salut %X\n", 0));
-	//printf("%d\n", printf("%d\n", printf("%s\n", "haricot vert")));
-	//printf("%s%s%s%s", "1", "2", "3", "4", "5");
+	ft_printf("%d, %x, %X, %u, %c, %s, %p \n", 12, 12, 12, 12, 'c', "c", 12);
+	printf("%d, %x, %X, %u, %c, %s, %p", 12, 12, 12, 12, 'c', "c", 12);
 }
 */

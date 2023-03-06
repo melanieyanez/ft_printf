@@ -6,11 +6,14 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:29:50 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/11 17:30:23 by myanez-p         ###   ########.fr       */
+/*   Updated: 2023/03/06 12:30:53 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* ------------------------------------------------------------------------ */
+/* Donne le nombre de caractères d'une chaîne */
 
 size_t	ft_strlen(char const *str)
 {

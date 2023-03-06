@@ -6,11 +6,14 @@
 /*   By: myanez-p <myanez-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 12:04:23 by myanez-p          #+#    #+#             */
-/*   Updated: 2022/11/11 15:07:53 by myanez-p         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:07:45 by myanez-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/* ------------------------------------------------------------------------ */
+/* Pour renvoyer le nombre de charactères imprimés */
 
 int	nbrlen(int n)
 {
@@ -33,6 +36,9 @@ int	nbrlen(int n)
 	return (size);
 }
 
+/* ------------------------------------------------------------------------ */
+/* Pour imprimer un nombre entier */
+
 int	print_number(int n)
 {
 	long int	nbr;
@@ -48,11 +54,3 @@ int	print_number(int n)
 	print_char((nbr % 10 + 48));
 	return (nbrlen(n));
 }
-
-/*
-int	main(void)
-{
-	printf("%d", print_number(-2147483648));
-	return (0);
-}
-*/
